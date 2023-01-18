@@ -1,6 +1,8 @@
 import random
 import time
 from datetime import datetime
+from datetime import datetime as dt
+
 import asyncio 
 import speedtest
 from pyrogram import filters
@@ -74,14 +76,14 @@ async def speed_test(client: Client, message: Message):
 @ren.on_message(filters.command(["xping"], cmd) & filters.me)
 async def pingme(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    start = dt.now()
     xx = await message.reply_text("**0% ▒▒▒▒▒▒▒▒▒▒**")
     await xx.edit("**20% ██▒▒▒▒▒▒▒▒**")
     await xx.edit("**40% ████▒▒▒▒▒▒**")
     await xx.edit("**60% ██████▒▒▒▒**")
     await xx.edit("**80% ████████▒▒**")
     await xx.edit("**100% ██████████**")
-    end = datetime.now()
+    end = dt.now()
     duration = (end - start).microseconds / 1000
     await xx.edit(
         f"**✾𝗣𝗜𝗡𝗚𝗘𝗥✾**\n"
@@ -99,7 +101,7 @@ credits by @xtsea
 async def fastpin(client: Client, message: Message):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    start = dt.now()
     await message.edit("**█▒▒▒▒▒▒▒▒▒**")
     await message.edit("**███▒▒▒▒▒▒▒**")
     await message.edit("**█████▒▒▒▒▒**")
@@ -107,7 +109,7 @@ async def fastpin(client: Client, message: Message):
     await message.edit("**██████████**")
     await message.edit("⚡")
     await asyncio.sleep(3)
-    end = datetime.now()
+    end = dt.now()
     duration = (end - start).microseconds / 1000
     await message.edit(
         f"╔════▣**TEST** ◎ **PING**▣════╗\n"
@@ -122,10 +124,10 @@ async def fastpin(client: Client, message: Message):
 @ren.on_message(filters.command("ping", cmd) & filters.me)
 async def zping(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    start = dt.now()
     await message.edit("**Pong!!**")
     await asyncio.sleep(1.5)
-    end = datetime.now()
+    end = dt.now()
     duration = (end - start).microseconds / 1000
     await message.edit(
         f" **Pong !!** "
@@ -138,10 +140,10 @@ async def zping(client: Client, message: Message):
 @ren.on_message(filters.command("palive", cmd) & filters.me)
 async def palive(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    start = dt.now()
     lol = await message.edit("**Pong!**")
     await asyncio.sleep(1.5)
-    end = datetime.now()
+    end = dt.now()
     await lol.delete()
     duration = (end - start).microseconds / 1000
     await message.send_photo(
@@ -159,7 +161,7 @@ async def palive(client: Client, message: Message):
 @ren.on_message(filters.command(["fck"], cmd) & filters.me)
 async def pingme_2(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
+    start = dt.now()
     xx = await message.reply_text("**0% ▒▒▒▒▒▒▒▒▒▒**")
     await xx.edit(".                       /¯ )")
     await xx.edit(".                       /¯ )\n                      /¯  /")
