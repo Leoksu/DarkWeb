@@ -24,9 +24,10 @@ from pykillerx.help import *
 
 START_TIME = dt.now()
 
-alive_logo = ALIVE_PIC or None
+def get_alive():
+    alive_logo = ALIVE_PIC or None
 
-beb = InlineKeyboardMarkup([[InlineKeyboardButton("• sᴜᴘᴘᴏʀᴛ •", url=f"https://t.me/pantekyks")]])
+peler = get_alive()
 
 if ALIVE_TEXT:
    txt = ALIVE_TEXT
@@ -48,7 +49,7 @@ async def alive(client: Client, message: Message):
        await message.delete()
     except:
        pass
-    send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
+    send = client.send_video if peler.endswith(".mp4") else client.send_photo
     xd = (f"{txt}")
     try:
         await asyncio.gather(
