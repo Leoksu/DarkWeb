@@ -11,7 +11,7 @@ from pyrogram.types import *
 from config import *
 from pytgcalls import __version__ as tg
 
-from DarkWeb import CMD_HELP
+from DarkWeb import START_TIME, CMD_HELP
 from DarkWeb import *
 from DarkWeb.modules.bot.inline import get_readable_time
 from DarkWeb.helper.cmd import cmd
@@ -22,12 +22,7 @@ from pykillerx import __version__ as killerx
 from pykillerx.extra import *
 from pykillerx.help import *
 
-START_TIME = dt.now()
-
-def get_alive():
-    alive_logo = ALIVE_PIC or None
-
-peler = get_alive()
+alive_logo = ALIVE_PIC or "https://graph.org/file/38b5b96fc1dd44557720b.jpg"
 
 if ALIVE_TEXT:
    txt = ALIVE_TEXT
