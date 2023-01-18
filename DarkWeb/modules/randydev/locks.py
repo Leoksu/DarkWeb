@@ -10,9 +10,82 @@ from DarkWeb.helper.cmd import *
 from DarkWeb import *
 
 from pykillerx import *
-from pykillerx.helper.tools import *
 from pykillerx.helper import *
 from pykillerx.help import *
+
+incorrect_parameters = f"Parameter Wrong, Type `.help locks`"
+data = {
+    "msg": "can_send_messages",
+    "stickers": "can_send_other_messages",
+    "gifs": "can_send_other_messages",
+    "media": "can_send_media_messages",
+    "games": "can_send_other_messages",
+    "inline": "can_send_other_messages",
+    "url": "can_add_web_page_previews",
+    "polls": "can_send_polls",
+    "info": "can_change_info",
+    "invite": "can_invite_users",
+    "pin": "can_pin_messages",
+}
+
+
+async def current_chat_permissions(client: Client, chat_id):
+    perms = []
+    perm = (await client.get_chat(chat_id)).permissions
+    if perm.can_send_messages:
+        perms.append("can_send_messages")
+    if perm.can_send_media_messages:
+        perms.append("can_send_media_messages")
+    if perm.can_send_other_messages:
+        perms.append("can_send_other_messages")
+    if perm.can_add_web_page_previews:
+        perms.append("can_add_web_page_previews")
+    if perm.can_send_polls:
+        perms.append("can_send_polls")
+    if perm.can_change_info:
+        perms.append("can_change_info")
+    if perm.can_invite_users:
+        perms.append("can_invite_users")
+    if perm.can_pin_messages:
+        perms.append("can_pin_messages")
+    return perms
+
+
+async def tg_lock(
+    client: Client,
+    message: Message,
+    parameter,
+    permissions: list,
+    perm: str,
+    lock: bool,
+):
+    if lock:
+        if perm not in permissions:
+            return await message.edit_text(f"🔒 `{parameter}` **is already locked!**")
+        permissions.remove(perm)
+    else:
+        if perm in permissions:
+            return await message.edit_text(f"🔓 `{parameter}` **is already Unlocked!**")
+        permissions.append(perm)
+    permissions = {perm: True for perm in list(set(permissions))}
+    try:
+        await client.set_chat_permissions(
+            message.chat.id, ChatPermissions(**permissions)
+        )
+    except ChatNotModified:
+        return await message.edit_text(
+            f"To unlock this, you have to `{prefix}unlock msg` first."
+        )
+    except ChatAdminRequired:
+        return await message.edit_text("`I don't have permission to do that.`")
+    await message.edit_text(
+        (
+            f"🔒 **Locked for non-admin!**\n  **Type:** `{parameter}`\n  **Chat:** {message.chat.title}"
+            if lock
+            else f"🔒 **Unlocked for non-admin!**\n  **Type:** `{parameter}`\n  **Chat:** {message.chat.title}"
+        )
+    )
+
 
 
 @ren.on_message(filters.command(["lock", "unlock"], cmd) & filters.me)
