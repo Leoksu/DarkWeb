@@ -7,7 +7,7 @@ from DarkWeb.helper.cmd import *
 from DarkWeb import *
 
 from pykillerx import *
-from pykilllerx.py_trans import *
+from pykillerx.py_trans import *
 from pykillerx.helper.utility import *
 from pykillerx.helper import *
 from pykillerx.help import *
