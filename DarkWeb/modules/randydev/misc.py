@@ -10,7 +10,7 @@ from pyrogram.types import *
 from config import *
 from pytgcalls import __version__ as tg
 
-from DarkWeb import START_TIME, CMD_HELP
+from DarkWeb import CMD_HELP
 from DarkWeb import *
 from DarkWeb.bot.inline import get_readable_time
 from DarkWeb.helper.cmd import cmd
