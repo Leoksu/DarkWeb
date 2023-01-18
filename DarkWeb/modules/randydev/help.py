@@ -7,10 +7,10 @@ from pyrogram import Client
 from pyrogram.types import Message
 
 from DarkWeb import app, CMD_HELP
-from DarkWeb.helper.utility import *
 from DarkWeb.helper.cmd import *
 
 from pykillerx.helper.hacking import *
+from pykillerx.helper.utility import *
 from pykillerx.helper import *
 from pykillerx.blacklist import *
 from pykillerx.help import *
