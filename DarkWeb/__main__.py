@@ -13,7 +13,7 @@ async def start_bot():
     await app.start()
     print("LOG: Mendirikan Bot token Booting..")
     for all_module in ALL_MODULES:
-        importlib.import_module("KillerXBase.modules" + all_module)
+        importlib.import_module("DarkWeb.modules" + all_module)
         print(f"Successfully Imported {all_module} 🛠️")
     for cli in clients:
         try:
