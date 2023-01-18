@@ -22,7 +22,6 @@ from pytgcalls import GroupCallFactory
 from config import *
 
 StartTime = time.time()
-START_TIME = datetime.now()
 CMD_HELP = {}
 clients = []
 ids = []
