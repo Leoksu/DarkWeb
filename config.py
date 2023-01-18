@@ -32,8 +32,8 @@ OPENAI_API = getConfig("OPENAI_API")
 BOT_TOKEN = getenv("BOT_TOKEN")
 ALIVE_PIC = getenv("ALIVE_PIC")
 ALIVE_TEXT = getenv("ALIVE_TEXT")
-PM_LOGGER = getenv("PM_LOGGER")
-LOG_GROUP = int(getenv("LOG_GROUP", ""))
+# PM_LOGGER = getenv("PM_LOGGER")
+# LOG_GROUP = int(getenv("LOG_GROUP", ""))
 PACK_NAME = getenv("PACK_NAME", "kang pack")
 GCAST_BLACKLIST = {int(x) for x in getenv("GCAST_BLACKLIST", "").split()}
 
