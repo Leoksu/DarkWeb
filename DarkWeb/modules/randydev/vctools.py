@@ -9,7 +9,7 @@ from pyrogram import Client
 
 from DarkWeb import *
 from DarkWeb.helper.cmd import *
-from DarkWeb.modules import *
+from DarkWeb.modules.randydev import *
 from DarkWeb.helper.misc import *
 
 from pykillerx import *
