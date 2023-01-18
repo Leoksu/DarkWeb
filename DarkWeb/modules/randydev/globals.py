@@ -11,7 +11,7 @@ from pykillerx.blacklist import *
 from pykillerx.help import *
 
 from DarkWeb import *
-from DarkWeb.modules.profile import extract_user, extract_user_and_reason
+from DarkWeb.modules.randydev.profile import extract_user, extract_user_and_reason
 from DarkWeb.helper.misc import *
 from DarkWeb.helper.cmd import *
 
