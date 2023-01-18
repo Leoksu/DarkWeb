@@ -79,7 +79,7 @@ async def creator(bot: Client, message: Message):
 
 @ren.on_message(filters.command(["uptime", "up"], cmd) & filters.me)
 async def uptime(bot: Client, message: Message):
-    now = datetime.now()
+    now = dt.now()
     current_uptime = now - START_TIME
     await message.edit(f"Uptime ⚡\n" f"```{str(current_uptime).split('.')[0]}```")
 
