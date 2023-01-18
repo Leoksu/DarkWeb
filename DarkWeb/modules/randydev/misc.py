@@ -2,6 +2,7 @@ import os
 from os import getenv
 import asyncio
 from datetime import datetime
+from datetime import datetime as dt
 from platform import python_version
 from pyrogram import __version__, filters, Client
 from pyrogram import Client as ren
@@ -21,7 +22,7 @@ from pykillerx import __version__ as killerx
 from pykillerx.extra import *
 from pykillerx.help import *
 
-START_TIME = datetime.now()
+START_TIME = dt.now()
 
 alive_logo = ALIVE_PIC or None
 
