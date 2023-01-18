@@ -9,8 +9,9 @@ from pyrogram import *
 from pyrogram.types import *
 from pyrogram import Client as ren
 from pyrogram import Client
-from KillerXBase.helper.cmd import *
-from KillerXBase.helper.misc import *
+
+from DarkWeb.helper.cmd import *
+from DarkWeb.helper.misc import *
 
 from pykillerx import *
 from pykillerx.helper import *
