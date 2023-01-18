@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import MessageDeleteForbidden
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from KillerXBase import CMD_HELP, app
+from DarkWeb import CMD_HELP, app
 
 from pykillerx.helper.data import *
 from pykillerx.helper import *
