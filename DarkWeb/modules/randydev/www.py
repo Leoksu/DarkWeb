@@ -10,7 +10,7 @@ from pyrogram.raw import functions
 from pyrogram.types import Message
 
 from DarkWeb import StartTime, app
-from DarkWeb.bot.inline import get_readable_time
+from DarkWeb.modules.bot.inline import get_readable_time
 from DarkWeb.helper.cmd import cmd
 
 from pykillerx.helper.hacking import *
