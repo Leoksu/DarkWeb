@@ -21,6 +21,8 @@ from pykillerx import __version__ as killerx
 from pykillerx.extra import *
 from pykillerx.help import *
 
+START_TIME = datetime.now()
+
 alive_logo = ALIVE_PIC or None
 
 beb = InlineKeyboardMarkup([[InlineKeyboardButton("• sᴜᴘᴘᴏʀᴛ •", url=f"https://t.me/pantekyks")]])
