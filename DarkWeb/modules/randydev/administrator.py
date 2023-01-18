@@ -12,7 +12,7 @@ from pyrogram.types import ChatPermissions, ChatPrivileges, Message
 
 admins_in_chat = {}
 
-from DarkWeb.modules.profile import extract_user
+from DarkWeb.modules.randydev.profile import extract_user
 from DarkWeb.helper.cmd import *
 
 from pykillerx.helper import *
