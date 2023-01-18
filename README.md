@@ -1,4 +1,12 @@
-### DarkWeb
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+  <b>DarkWeb</b>
+  
+</p>
+<p align="centar">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+![IMG_20230119_011431_335](https://user-images.githubusercontent.com/90479255/213261795-2719a53b-cda1-4fc2-b358-6436d747c172.jpg)
 
 ![Python Version](https://img.shields.io/badge/python-3.9-green?style=for-the-badge&logo=appveyor)
 ![Issues](https://img.shields.io/github/issues/TeamKillerX/DarkWeb?style=for-the-badge&logo=appveyor)
