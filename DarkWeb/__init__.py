@@ -16,12 +16,14 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pykillerx import *
 from pykillerx.helper import *
 from datetime import datetime
+from datetime import datetime as dt
 import time
 from aiohttp import ClientSession
 from pytgcalls import GroupCallFactory
 from config import *
 
 StartTime = time.time()
+START_TIME = dt.now()
 CMD_HELP = {}
 clients = []
 ids = []
