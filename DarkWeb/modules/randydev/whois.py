@@ -7,7 +7,7 @@ from pyrogram.enums import ChatType
 from pyrogram.types import Message
 
 
-from DarkWeb.modules.profile import extract_user
+from DarkWeb.modules.randydev.profile import extract_user
 from DarkWeb.helper.cmd import *
 
 from pykillerx import *
