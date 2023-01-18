@@ -12,7 +12,7 @@ from pytgcalls import __version__ as tg
 
 from DarkWeb import CMD_HELP
 from DarkWeb import *
-from DarkWeb.bot.inline import get_readable_time
+from DarkWeb.modules.bot.inline import get_readable_time
 from DarkWeb.helper.cmd import cmd
 
 from pykillerx.helper.hacking import *
