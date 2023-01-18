@@ -5,7 +5,7 @@ from pyrogram.types import *
 from pyrogram import Client as ren
 from pyrogram import Client
 
-from KillerXBase.helper.cmd import *
+from DarkWeb.helper.cmd import *
 
 from pykillerx.helper.basic import *
 from pykillerx.helper.parser import *
