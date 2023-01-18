@@ -57,7 +57,6 @@ async def alive(client: Client, message: Message):
             send(
                 message.chat.id,
                 caption=xd,
-                reply_markup=beb,
                 reply_to_message_id=ReplyCheck(message),
             ),
         )
