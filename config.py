@@ -21,12 +21,10 @@ API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH")
 
 OWNER_ID = int(getenv("OWNER_ID", ""))
-MONGO_URL = getenv("MONGO_URL", "mongodb://mongo:qEMvAihniInPbSc5EWYj@containers-us-west-162.railway.app:7264")
 
-DB_URL = getenv(
-    "DATABASE_URL",
-    who("cG9zdGdyZXNxbDovL3Bvc3RncmVzOlFqS3VVMmFkRGVaSFF0dzhkajc2QGNvbnRhaW5lcnMtdXMtd2VzdC0xMjAucmFpbHdheS5hcHA6Njc2MC9yYWlsd2F5Cg==").decode("utf-8"),
-)
+# MONGO_URL = getenv("MONGO_URL", "mongodb://mongo:qEMvAihniInPbSc5EWYj@containers-us-west-162.railway.app:7264")
+
+DB_URL = getenv("DATABASE_URL", "postgresql://postgres:cXnFDqamxUeuACQZ2glC@containers-us-west-143.railway.app:7582/railway")
 
 OPENAI_API = getConfig("OPENAI_API")
 BOT_TOKEN = getenv("BOT_TOKEN")
