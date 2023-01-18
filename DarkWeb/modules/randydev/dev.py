@@ -21,13 +21,13 @@ from pyromod import *
 
 from DarkWeb.helper.cmd import *
 from DarkWeb.helper.cmd import dont_know as pap_tt
-from DarkWeb.helper.basic import *
 from DarkWeb.helper.misc import *
 from DarkWeb import *
 
 from pykillerx.helper import ANAK_KONTOL as desah
 from pykillerx import *
 from pykillerx.helper import *
+from pykillerx.helper.basic import *
 from pykillerx.blacklist import *
 from pykillerx.help import *
 from pykillerx.helper.hacking import *
