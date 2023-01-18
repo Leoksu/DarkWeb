@@ -18,7 +18,7 @@ from pyrogram.types import (
     Message,
 )
 
-from KillerXBase import CMD_HELP, StartTime, app
+from DarkWeb import CMD_HELP, StartTime, app
 
 from pykillerx.helper.data import *
 from pykillerx.helper import *
