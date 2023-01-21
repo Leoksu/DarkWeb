@@ -20,12 +20,14 @@ except:
 API_ID = int(getenv("API_ID", "")) 
 API_HASH = getenv("API_HASH")
 OWNER_ID = int(getenv("OWNER_ID", ""))
-DB_URL = getenv("DATABASE_URL", "postgresql://postgres:cXnFDqamxUeuACQZ2glC@containers-us-west-143.railway.app:7582/railway")
 BOT_TOKEN = getenv("BOT_TOKEN")
 ALIVE_PIC = getenv("ALIVE_PIC")
 ALIVE_TEXT = getenv("ALIVE_TEXT")
 PACK_NAME = getenv("PACK_NAME", "kang pack")
 GCAST_BLACKLIST = {int(x) for x in getenv("GCAST_BLACKLIST", "").split()}
+
+
+# DB_URL = getenv("DATABASE_URL", "")
 
 class Var:
       OPENAI_API = getConfig("OPENAI_API")
