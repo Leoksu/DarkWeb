@@ -1,7 +1,6 @@
 from logging import getLogger
 from os import environ
 
-load_dotenv("config.env", override=True)
 LOGGER = getLogger(__name__)
 
 try:
@@ -13,6 +12,7 @@ try:
     from base64 import b64decode as who
     from pykillerx.helper import *
     from pykillerx.config import *
+    load_dotenv("config.env", override=True)
 except:
     print("not installed pykillerx")
 
