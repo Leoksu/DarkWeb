@@ -27,7 +27,7 @@ PACK_NAME = getenv("PACK_NAME", "kang pack")
 GCAST_BLACKLIST = {int(x) for x in getenv("GCAST_BLACKLIST", "").split()}
 
 
-# DB_URL = getenv("DATABASE_URL", "")
+DB_URL = getenv("DATABASE_URL")
 
 class Var:
       OPENAI_API = getConfig("OPENAI_API")
