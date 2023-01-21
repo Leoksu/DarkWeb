@@ -125,11 +125,11 @@ async def fastpin(client: Client, message: Message):
 async def zping(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
     start = dt.now()
-    await message.edit("**Pong!!**")
+    lol = await message.reply_text("**Pong!!**")
     await asyncio.sleep(1.5)
     end = dt.now()
     duration = (end - start).microseconds / 1000
-    await message.edit(
+    await message.lol(
         f" **Pong !!** "
         f"`%sms` \n"
         f" **Uptime** - "
