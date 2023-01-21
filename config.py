@@ -22,8 +22,6 @@ API_HASH = getenv("API_HASH")
 
 OWNER_ID = int(getenv("OWNER_ID", ""))
 
-# MONGO_URL = getenv("MONGO_URL", "mongodb://mongo:qEMvAihniInPbSc5EWYj@containers-us-west-162.railway.app:7264")
-
 DB_URL = getenv("DATABASE_URL", "postgresql://postgres:cXnFDqamxUeuACQZ2glC@containers-us-west-143.railway.app:7582/railway")
 
 OPENAI_API = getConfig("OPENAI_API")
@@ -40,7 +38,7 @@ CHANNEL = "@RendyProjects"
 SUPPORT = "@pantekyks"
 
 BOT_VER = "0.3.0@dev"
-BRANCH = getenv("BRANCH", "hacker") #don't change
+BRANCH = getenv("BRANCH", "DarkWeb") #don't change
  
 STRING_SESSION1 = getenv("STRING_SESSION1", "")
 STRING_SESSION2 = getenv("STRING_SESSION2", None)
