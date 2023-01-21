@@ -1,37 +1,34 @@
-from os import getenv
-import os
-from dotenv import load_dotenv
-from base64 import b64decode as who
-from pykillerx.helper import *
-from pykillerx import *
-import sys
 from logging import getLogger
 from os import environ
 
 load_dotenv("config.env", override=True)
 LOGGER = getLogger(__name__)
 
-def getConfig(name: str):
-    try:
-        return environ[name]
-    except:
-        return ""
+try:
+
+    from os import getenv
+    import sys
+    import os
+    from dotenv import load_dotenv
+    from base64 import b64decode as who
+    from pykillerx.helper import *
+    from pykillerx.config import *
+except:
+    print("not installed pykillerx")
+
 
 API_ID = int(getenv("API_ID", "")) 
 API_HASH = getenv("API_HASH")
-
 OWNER_ID = int(getenv("OWNER_ID", ""))
-
 DB_URL = getenv("DATABASE_URL", "postgresql://postgres:cXnFDqamxUeuACQZ2glC@containers-us-west-143.railway.app:7582/railway")
-
-OPENAI_API = getConfig("OPENAI_API")
 BOT_TOKEN = getenv("BOT_TOKEN")
 ALIVE_PIC = getenv("ALIVE_PIC")
 ALIVE_TEXT = getenv("ALIVE_TEXT")
-# PM_LOGGER = getenv("PM_LOGGER")
-# LOG_GROUP = int(getenv("LOG_GROUP", ""))
 PACK_NAME = getenv("PACK_NAME", "kang pack")
 GCAST_BLACKLIST = {int(x) for x in getenv("GCAST_BLACKLIST", "").split()}
+
+class Var(object):
+      OPENAI_API = getConfig("OPENAI_API")
 
 # don't kanger repo this !!!
 CHANNEL = "@RendyProjects"
