@@ -27,7 +27,7 @@ ALIVE_TEXT = getenv("ALIVE_TEXT")
 PACK_NAME = getenv("PACK_NAME", "kang pack")
 GCAST_BLACKLIST = {int(x) for x in getenv("GCAST_BLACKLIST", "").split()}
 
-class Var(object):
+class Var:
       OPENAI_API = getConfig("OPENAI_API")
 
 # don't kanger repo this !!!
