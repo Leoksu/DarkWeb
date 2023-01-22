@@ -82,7 +82,7 @@ async def stealch(client: Client, message: Message):
 async def cp(client: Client, message: Message):
     tulis = get_arg(message)
     user = message.reply_to_message
-    if not user:
+    if not tulis and not user:
        return await message.edit("lu goblok") 
     try:
        await user.copy(message.chat.id, caption=tulis)
