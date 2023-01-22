@@ -52,7 +52,7 @@ async def screen(c, m):
 
 
 @ren.on_message(filters.command(["neofetch"], cmd) & filters.me)
-async def neofetch(c, m):
+async def neofetch(c, m: Message):
     hacker = await message.reply_text("`Prossing.....`")
     try:
         neofetch = (await shell_exec("neofetch --stdout"))[0]
