@@ -19,9 +19,8 @@ from pykillerx.help import *
 @ren.on_message(filters.command("tagm", cmd) & filters.me)
 async def tagm(client: Client, message: Message):
     tag = get_arg(message)
-    args = await extract_user(message)
     lol = message.reply_to_message
-    if not args and not lol:
+    if not tag and not lol:
        return await message.edit("**Please Reply**")
     if tag:
        try:
