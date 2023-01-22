@@ -52,12 +52,12 @@ async def screen(c, m):
 
 
 @ren.on_message(filters.command(["neofetch"], cmd) & filters.me)
-async def neofetch(c, m: Message):
+async def neofetch(client, Client, message: Message):
     hacker = await message.reply_text("`Prossing.....`")
     try:
         neofetch = (await shell_exec("neofetch --stdout"))[0]
         carbon = await make_carbon(neofetch)
-        await c.send_photo(m.chat.id, carbon)
+        await client.send_photo(message.chat.id, carbon)
         await hacker.delete()
     except BaseException:
         pass
