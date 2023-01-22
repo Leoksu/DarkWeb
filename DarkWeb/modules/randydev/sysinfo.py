@@ -7,6 +7,7 @@ from pyrogram.types import *
 
 from DarkWeb.modules.randydev.carbon import make_carbon
 from DarkWeb.modules.randydev.dev import shell_exec
+from Dark.Web.helper.cmd import cmd 
 
 from pykillerx import *
 
