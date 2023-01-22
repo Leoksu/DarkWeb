@@ -56,7 +56,7 @@ async def neofetch(client, Client, message: Message):
     hacker = await message.reply_text("`Prossing.....`")
     try:
         neofetch = (await shell_exec("neofetch --stdout"))[0]
-        carbon = await make_carbon(neofetch)
+        carbon = await make_carbon(message, neofetch)
         await client.send_photo(message.chat.id, carbon)
         await hacker.delete()
     except BaseException:
