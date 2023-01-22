@@ -21,7 +21,7 @@ async def tagm(client: Client, message: Message):
     tag = get_arg(message)
     args = await extract_user(message)
     lol = message.reply_to_message
-    if not lol:
+    if not args and not lol:
        return await message.edit("**Please Reply**")
     if tag:
        try:
