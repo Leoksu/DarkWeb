@@ -34,3 +34,4 @@ motor==3.0.0
 reportlab
 svglib
 pytgcalls==3.0.0.dev22
+werkzeug>=3.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
